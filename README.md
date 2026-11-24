@@ -79,6 +79,10 @@ flowchart LR
 
 依存パッケージ不要。Python 3.10以上を想定した軽量な採点チェックのサンプルを同梱しています。**作詞AIモデル・音声生成エンジン自体は実装していません。**
 
+## バージョン管理された歌詞受渡し（ローカルIF）
+
+[Lyric Handoff v1](docs/handoff_interface.md)では歌詞原文・版ID・SHA-256・任意の編集評価を機械的に照合できるJSONとして出力します。実際のSuno/VOCALOIDへの接続・歌唱同期は実機未検証の別工程です。
+
 ## Documents
 
 - [設計思想と役割](docs/architecture.md)

@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Gacky-Lab Lyric Handoff v1",
+  "description": "A local handoff; not a Suno or VOCALOID external API.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "song_id",
+    "lyric_version_id",
+    "language",
+    "lyrics_text",
+    "lyrics_sha256"
+  ],
+  "properties": {
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "song_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+    },
+    "lyric_version_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$"
+    },
+    "language": {
+      "const": "ja"
+    },
+    "lyrics_text": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1000000
+    },
+    "lyrics_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "editorial_assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method",
+        "complete",
+        "score_100",
+        "evidence_status"
+      ],
+      "properties": {
+        "method": {
+          "const": "editorial_weighted_1_to_5"
+        },
+        "complete": {
+          "type": "boolean"
+        },
+        "score_100": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 20,
+          "maximum": 100
+        },
+        "evidence_status": {
+          "const": "author_editorial_not_listener_validated"
+        },
+        "rubric_version": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
