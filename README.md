@@ -113,7 +113,7 @@ flowchart LR
 
 ## Related project
 
-- [Gacky-Lab/AI-VOCALOID-STUDIO](https://github.com/Gacky-Lab/AI-VOCALOID-STUDIO) — Suno素材から純正歌声合成・REAPERまでを扱う**別の技術設計**。両者の統合は構想段階です。
+- [Gacky-Lab/AI-VOCALOID-STUDIO](https://github.com/Gacky-Lab/AI-VOCALOID-STUDIO) — Suno素材から純正歌声合成・REAPERまでを扱う**別の技術設計**。歌詞Handoffのローカルデータ受渡しはCIで検証済み。歌詞の音符整列・音声制作の実機統合は構想段階です。
 
 ## License / 権利
 
