@@ -83,6 +83,10 @@ flowchart LR
 
 [Lyric Handoff v1](docs/handoff_interface.md)では歌詞原文・版ID・SHA-256・任意の編集評価を機械的に照合できるJSONとして出力します。実際のSuno/VOCALOIDへの接続・歌唱同期は実機未検証の別工程です。
 
+## リスナー検証の層別（新規）
+
+[テキスト比較・歌詞単独音源比較・複合音源比較を判定する事前検査](docs/STUDY_SELECTION_AND_EVIDENCE.md)を追加しました。試験計画の条件不足を検知し、聴取実測は未実施（NOT_RUN）として管理します。
+
 ## Documents
 
 - [設計思想と役割](docs/architecture.md)

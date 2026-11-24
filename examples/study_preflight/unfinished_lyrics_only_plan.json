@@ -1,0 +1,20 @@
+{
+  "plan_version": "1.0.0",
+  "experiment_id": "demo-fictitious-001",
+  "song_id": "fictional-receipt-demo",
+  "lyric_a_version": "demo-a",
+  "lyric_b_version": "demo-b",
+  "comparison_type": "lyrics_only_audio",
+  "consent_planned": false,
+  "random_order_planned": false,
+  "primary_outcome_predeclared": false,
+  "audio_controls": {
+    "melody_fixed": false,
+    "vocal_fixed": false,
+    "arrangement_fixed": false,
+    "tempo_fixed": false,
+    "loudness_fixed": false,
+    "source_files_verified": false
+  },
+  "measurement_state": "NOT_RUN"
+}

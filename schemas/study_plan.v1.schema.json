@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lyric study plan v1 (preflight only)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "plan_version",
+    "experiment_id",
+    "song_id",
+    "lyric_a_version",
+    "lyric_b_version",
+    "comparison_type",
+    "consent_planned",
+    "random_order_planned",
+    "primary_outcome_predeclared",
+    "audio_controls",
+    "measurement_state"
+  ],
+  "properties": {
+    "plan_version": {
+      "const": "1.0.0"
+    },
+    "experiment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "song_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lyric_a_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lyric_b_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "comparison_type": {
+      "enum": [
+        "text_only",
+        "lyrics_only_audio",
+        "composite_audio"
+      ]
+    },
+    "consent_planned": {
+      "type": "boolean"
+    },
+    "random_order_planned": {
+      "type": "boolean"
+    },
+    "primary_outcome_predeclared": {
+      "type": "boolean"
+    },
+    "audio_controls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "melody_fixed",
+        "vocal_fixed",
+        "arrangement_fixed",
+        "tempo_fixed",
+        "loudness_fixed",
+        "source_files_verified"
+      ],
+      "properties": {
+        "melody_fixed": {
+          "type": "boolean"
+        },
+        "vocal_fixed": {
+          "type": "boolean"
+        },
+        "arrangement_fixed": {
+          "type": "boolean"
+        },
+        "tempo_fixed": {
+          "type": "boolean"
+        },
+        "loudness_fixed": {
+          "type": "boolean"
+        },
+        "source_files_verified": {
+          "type": "boolean"
+        }
+      }
+    },
+    "measurement_state": {
+      "const": "NOT_RUN"
+    }
+  }
+}
