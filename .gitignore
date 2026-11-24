@@ -1,0 +1,20 @@
+# Keep private source data and drafts out of the public repository
+*.wav
+*.mp3
+*.flac
+*.mid
+*.vpr
+*.vsqx
+*.rpp
+*.env
+.env.*
+__pycache__/
+.pytest_cache/
+.DS_Store
+Thumbs.db
+private/
+internal/
+raw-listener-data/
+output/
+*.xlsx
+*.xlsm
