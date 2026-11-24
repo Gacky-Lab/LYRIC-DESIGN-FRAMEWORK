@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1.0",
+  "song_id": "fictional-receipt-demo",
+  "lyric_version_id": "demo-a",
+  "rater_id": "fictional-editorial-example",
+  "assessment_type": "lyric",
+  "scores": {
+    "scene": 1,
+    "conflict": 2,
+    "originality": 1,
+    "chorus": 2,
+    "development": 2,
+    "singability": 3,
+    "ambiguity": 2,
+    "universality": 4
+  },
+  "evidence_notes": {
+    "scene": "説明用の架空の編集判断",
+    "chorus": "歌詞テキストのみの暫定評価。記憶性の実測なし",
+    "singability": "旋律なしの音数・語感の予備評価。歌唱試験なし"
+  },
+  "status": "illustrative_only_unvalidated",
+  "notes": "架空例。聴取者データ、実音源、実証結果は含まない。"
+}
