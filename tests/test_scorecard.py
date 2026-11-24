@@ -28,4 +28,32 @@ class ScorecardTests(unittest.TestCase):
         p=self.payload('lyric',5);p['scores']['extra']=1
         with self.assertRaises(ValueError): score_card(p,config)
 
+    def test_lyric_weights_sum_100(self):
+        self.assertEqual(sum(x['weight'] for x in config['lyric']['dimensions']),100)
+    def test_vocal_weights_sum_100(self):
+        self.assertEqual(sum(x['weight'] for x in config['vocal']['dimensions']),100)
+    def test_bad_payload_type(self):
+        with self.assertRaises(ValueError): score_card([],config)
+    def test_bad_assessment_type(self):
+        p=self.payload('lyric',3);p['assessment_type']='prediction'
+        with self.assertRaises(ValueError): score_card(p,config)
+    def test_bool_not_rating(self):
+        p=self.payload('lyric',3);p['scores']['scene']=True
+        with self.assertRaises(ValueError): score_card(p,config)
+    def test_missing_axis(self):
+        p=self.payload('lyric',3);del p['scores']['scene']
+        with self.assertRaises(ValueError): score_card(p,config)
+    def test_nonfinite_not_rating(self):
+        p=self.payload('lyric',3);p['scores']['scene']=float('nan')
+        with self.assertRaises(ValueError): score_card(p,config)
+    def test_all_vocal_one_is_20(self):
+        self.assertEqual(score_card(self.payload('vocal',1),config)['score_100'],20)
+    def test_fictional_example_scores(self):
+        for label in ('A','B'):
+            path=ROOT/'examples'/'fictional-revision'/f'scorecard-{label}.json'
+            card=json.loads(path.read_text(encoding='utf-8'))
+            result=score_card(card,config)
+            self.assertTrue(result['complete'])
+            self.assertTrue(20 <= result['score_100'] <= 100)
+
 if __name__=='__main__': unittest.main()

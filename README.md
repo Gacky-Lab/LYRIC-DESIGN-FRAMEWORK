@@ -61,6 +61,8 @@ flowchart LR
 | 普遍性 | 5 |
 | **合計** | **100** |
 
+**注意：全軸を最低の1点とした場合でも、総合は20/100点です（全軸未採点は合計なし）。** これは1〜5段階を重みづけする計算仕様で、絶対的な品質尺度ではありません。
+
 この**配点は制作方針による編集上の選択**です。科学的な最適値でも、ヒット確率でもありません。歌詞の品質と、音源で実際に歌った際の適合性は別に評価します。詳細は [歌詞評価ルール](docs/evaluation.md) と [歌唱評価](docs/vocal_fit.md)。
 
 ## Quick start / 最初の使い方
@@ -70,6 +72,10 @@ flowchart LR
 3. [`templates/scorecard.template.json`](templates/scorecard.template.json) に1〜5段階の仮評価を記入
 4. `python scripts/scorecard.py templates/scorecard.template.json` で入力値を点検（未採点は未採点と表示）
 5. 音源を聴き、[検証設計](docs/validation.md) に従って条件と結果を記録
+
+**実際に試す例：** [架空の作詞・改稿デモ（A→B）](examples/fictional-revision/README.md) では、視点・感情・時間の層別から、歌詞の改稿・8軸仮採点・検証計画までを具体的に追えます。*数値は説明用の仮評価であり、聴取実験の成果ではありません。*
+
+**品質チェック：** `python -m unittest discover -s tests -v`、`python scripts/check_repository.py`。`.github/workflows/quality.yml` がpush/PR時にこれらをPython 3.10と3.13で自動実行する設計です。実際のCI成功可否は[Actions](https://github.com/Gacky-Lab/LYRIC-DESIGN-FRAMEWORK/actions)で確認してください。
 
 依存パッケージ不要。Python 3.10以上を想定した軽量な採点チェックのサンプルを同梱しています。**作詞AIモデル・音声生成エンジン自体は実装していません。**
 
@@ -85,13 +91,15 @@ flowchart LR
 - [公開範囲・権利・個人情報](docs/publication_and_rights.md)
 - [既存AI VOCALOID STUDIOとの接続](docs/integration.md)
 - [English overview](docs/english_overview.md)
+- [架空の作詞・改稿デモ](examples/fictional-revision/README.md)
 
 ## Scope / 検証状況
 
 | 項目 | ステータス |
 | --- | --- |
 | 層別・評価ルールの文書化 | 設計済み |
-| 評価入力の静的チェック | 同梱スクリプトをテスト可能 |
+| 評価入力の静的チェック | テスト付きコード・CI定義あり（実行状況はActions参照） |
+| サンプル作詞・改稿 | 架空例あり（効果の実測ではない） |
 | 8軸が記憶性・ヒットに有効 | **未実証** |
 | リスナーA/B比較 | **未実施** |
 | Suno / VOCALOIDとの自動連携 | **未実装** |

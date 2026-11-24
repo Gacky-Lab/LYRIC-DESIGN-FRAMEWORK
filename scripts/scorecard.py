@@ -9,6 +9,8 @@ ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / 'config' / 'rubric.json'
 
 def score_card(payload, config):
+    if not isinstance(payload, dict):
+        raise ValueError('scorecard must be a JSON object')
     kind = payload.get('assessment_type')
     if kind not in ('lyric', 'vocal'):
         raise ValueError('assessment_type must be lyric or vocal')
@@ -31,7 +33,7 @@ def score_card(payload, config):
         if isinstance(v, bool) or not isinstance(v, (int,float)) or not (1<=v<=5):
             raise ValueError(f'{d["id"]}: rating must be 1..5 or null')
         total += d['weight'] * v/5
-    return {'kind':kind, 'complete': not unrated, 'score_100': round(total,2) if not unrated else None, 'unrated_dimensions':unrated, 'note':'編集用採点。実聴・リスナー検証やヒット確率ではありません。'}
+    return {'kind':kind, 'complete': not unrated, 'score_100': round(total,2) if not unrated else None, 'unrated_dimensions':unrated, 'note':'1〜5段階の重みづけ方式：全軸最低評価でも20点。編集上の仮評価で、実聴・記憶性・ヒット確率の測定ではありません。'}
 
 def main(argv=None):
     p=argparse.ArgumentParser(description=__doc__)
