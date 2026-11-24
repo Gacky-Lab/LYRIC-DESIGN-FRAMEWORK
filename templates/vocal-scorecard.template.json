@@ -1,0 +1,17 @@
+{
+  "schema_version": "0.1.0",
+  "song_id": "",
+  "audio_version_id": "",
+  "listening_date": null,
+  "assessment_type": "vocal",
+  "scores": {
+    "intelligibility": null,
+    "accent": null,
+    "syllables": null,
+    "chorus_recall": null,
+    "emotional_fit": null,
+    "synthetic_voice": null
+  },
+  "status": "unrated",
+  "notes": "Rate only after actually listening to the relevant audio."
+}

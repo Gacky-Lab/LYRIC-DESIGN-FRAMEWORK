@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1.0",
+  "song_id": "",
+  "title": "",
+  "status": "draft",
+  "source_material": [
+    ""
+  ],
+  "perspective": {
+    "primary": null,
+    "secondary": []
+  },
+  "emotion": {
+    "valence": null,
+    "arousal": null,
+    "trajectory": []
+  },
+  "time_focus": {
+    "primary": null,
+    "secondary": []
+  },
+  "core_question": "",
+  "inner_conflict_or_tension": "",
+  "concrete_scene": "",
+  "distinctive_line": "",
+  "emotional_arc": "",
+  "notes": "",
+  "lyric_version_id": "",
+  "audio_version_id": null,
+  "evidence_status": "unvalidated"
+}

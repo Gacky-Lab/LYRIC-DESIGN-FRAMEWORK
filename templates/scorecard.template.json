@@ -1,0 +1,20 @@
+{
+  "schema_version": "0.1.0",
+  "song_id": "",
+  "lyric_version_id": "",
+  "rater_id": "",
+  "assessment_type": "lyric",
+  "scores": {
+    "scene": null,
+    "conflict": null,
+    "originality": null,
+    "chorus": null,
+    "development": null,
+    "singability": null,
+    "ambiguity": null,
+    "universality": null
+  },
+  "evidence_notes": {},
+  "status": "unrated",
+  "notes": "All null = not evaluated; no fake listener scores."
+}

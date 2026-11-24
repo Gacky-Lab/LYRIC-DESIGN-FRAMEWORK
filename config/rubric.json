@@ -1,0 +1,89 @@
+{
+  "framework_version": "0.1.0-design",
+  "scales": {
+    "unrated": null,
+    "rating_min": 1,
+    "rating_max": 5,
+    "method": "sum(weight * rating/5); 1-5 scale means lowest complete score is 20, not 0"
+  },
+  "lyric": {
+    "total_weight": 100,
+    "dimensions": [
+      {
+        "id": "scene",
+        "label_ja": "情景の具体性",
+        "weight": 15
+      },
+      {
+        "id": "conflict",
+        "label_ja": "心理的矛盾・本音",
+        "weight": 15
+      },
+      {
+        "id": "originality",
+        "label_ja": "独創性・発見",
+        "weight": 20
+      },
+      {
+        "id": "chorus",
+        "label_ja": "サビの強さ・記憶性",
+        "weight": 20
+      },
+      {
+        "id": "development",
+        "label_ja": "物語・感情の変化",
+        "weight": 10
+      },
+      {
+        "id": "singability",
+        "label_ja": "日本語の歌いやすさ",
+        "weight": 10
+      },
+      {
+        "id": "ambiguity",
+        "label_ja": "解釈の余白",
+        "weight": 5
+      },
+      {
+        "id": "universality",
+        "label_ja": "普遍性",
+        "weight": 5
+      }
+    ]
+  },
+  "vocal": {
+    "total_weight": 100,
+    "dimensions": [
+      {
+        "id": "intelligibility",
+        "label_ja": "明瞭さ",
+        "weight": 25
+      },
+      {
+        "id": "accent",
+        "label_ja": "日本語アクセント",
+        "weight": 20
+      },
+      {
+        "id": "syllables",
+        "label_ja": "音節リズム",
+        "weight": 15
+      },
+      {
+        "id": "chorus_recall",
+        "label_ja": "サビ記憶",
+        "weight": 20
+      },
+      {
+        "id": "emotional_fit",
+        "label_ja": "感情整合",
+        "weight": 15
+      },
+      {
+        "id": "synthetic_voice",
+        "label_ja": "合成声表現",
+        "weight": 5
+      }
+    ]
+  }
+}
