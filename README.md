@@ -1,5 +1,8 @@
 # LYRIC DESIGN FRAMEWORK
 
+[![Offline CI](https://github.com/Gacky-Lab/LYRIC-DESIGN-FRAMEWORK/actions/workflows/quality.yml/badge.svg?branch=main)](https://github.com/Gacky-Lab/LYRIC-DESIGN-FRAMEWORK/actions/workflows/quality.yml) · [Gacky-Lab research portfolio](https://github.com/Gacky-Lab/AI-MUSIC-VIDEO-STUDIO/blob/main/docs/profile/README.md)
+
+
 **歌詞の層別・構造化・評価・検証をつなぐ制作設計（Design / Pre-validation）**
 
 > センスを否定しない。偶然だけに任せない。
